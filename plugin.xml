@@ -25,22 +25,14 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="de.appplant.cordova.plugin.badge"
-        version="0.7.1">
+        version="1.0.0">
 
-    <name>Cordova Badge Plugin</name>
-
-    <description>
-        Cordova plugin to access and modify the badge number of the app icon
-    </description>
-
-    <repo>https://github.com/katzer/cordova-plugin-badge.git</repo>
-
-    <issue>https://github.com/katzer/cordova-plugin-badge/issues</issue>
-
-    <keywords>appplant, badge</keywords>
-
+    <name>Cordova Badge Plugin (ETTU)</name>
+    <description>Cordova plugin to access and modify the badge number of the app icon</description>
+    <repo>https://github.com/ETTU/cordova-plugin-badge</repo>
+    <issue>https://github.com/ETTU/cordova-plugin-badge/issues</issue>
+    <keywords>badge, notifications</keywords>
     <license>Apache 2.0</license>
-
     <author>Sebastián Katzer</author>
 
     <!-- cordova -->
@@ -67,7 +59,7 @@
     <!-- ios -->
     <platform name="ios">
 
-        <dependency id="de.appplant.cordova.common.registerusernotificationsettings" />
+        <dependency id="cordova-plugin-app-event" />
 
         <config-file target="config.xml" parent="/*">
             <feature name="Badge">
@@ -96,7 +88,8 @@
 
     </platform>
 
-    <!-- android -->
+  <!--TODO: me.leolin:ShortcutBadger:1.1.2@aar not working-->
+  <!-- android --><!--
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="/*">
@@ -106,10 +99,10 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <!--
+            --><!--
              * The launch activity is triggered when a notification is clicked by a user.
              * The activity launches the main activity.
-            -->
+            --><!--
             <activity
                 android:name="de.appplant.cordova.plugin.badge.LaunchActivity"
                 android:theme="@android:style/Theme.Black.NoTitleBar"
@@ -133,7 +126,7 @@
 
     </platform>
 
-    <!-- amazon-fireos -->
+    --><!-- amazon-fireos --><!--
     <platform name="amazon-fireos">
 
         <config-file target="res/xml/config.xml" parent="/*">
@@ -143,10 +136,10 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <!--
+            --><!--
              * The launch activity is triggered when a notification is clicked by a user.
              * The activity launches the main activity.
-            -->
+            --><!--
             <activity
                 android:name="de.appplant.cordova.plugin.badge.LaunchActivity"
                 android:theme="@android:style/Theme.Black.NoTitleBar"
@@ -168,7 +161,7 @@
             src="src/android/LaunchActivity.java"
             target-dir="src/de/appplant/cordova/plugin/badge" />
 
-    </platform>
+    </platform>-->
 
     <!-- browser -->
     <platform name="browser">
